@@ -1,11 +1,14 @@
 :root{
     --accent-color:#4D5AE5;
+    --accent-color-social:#31D0AA;
     --main-text-color: #434455;
     --dark-theme-text-color: #FFFFFF;
     --dark-theme-color: #2E2F42;
     --active-order-btn-color:#404BBF;
     --footer-text-color:#E7E9FC;
     --light-grey:#F4F4FD;
+    --footer-social:rgba(255, 255, 255, 0.1);
+    --company-color:#8E8F99;
 }
 
 /* ==============normalize============== */
@@ -181,6 +184,7 @@ h1,h2,h3,h4,p{
     background-repeat: no-repeat;
     background-position: center center;
     align-items: stretch;
+    background-size: cover;
 }
 .hero-div{
     display: flex;
@@ -213,12 +217,14 @@ h1,h2,h3,h4,p{
     border-radius: 4px;
     display: flex;
     justify-content: center;
+
+    margin-bottom: 8px;
     padding: 24px 0;
 }
-.advantage-icon-svg{
+/* .advantage-icon-svg{
     height: 64px;
     width: 64px;
-}
+} */
 
 .advantage-list-name{
     font-weight: 500;
@@ -305,11 +311,7 @@ h1,h2,h3,h4,p{
 }
 
 .card-item-div{
-    /* border: 1px solid var(--footer-text-color);
-    border-top: none;
-    border-radius: 0px 0px 4px 4px; */
-
-    padding: 32px 0;
+      padding: 32px 0;
 }
 
 .teammate-name{
@@ -326,6 +328,7 @@ h1,h2,h3,h4,p{
 }
 .teammate-trade{
     text-align: center;
+    margin-bottom: 8px;
 
     font-size: 16px;
     line-height: 1.5;
@@ -334,7 +337,70 @@ h1,h2,h3,h4,p{
     color: var(--main-text-color);
 }
 
+/* ==============team-section-social-icon============== */
+
+.social-list{
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-list-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+
+    padding: 2px;
+    width: 40px;
+    height: 40px;
+}
+
+.social-list-link:hover,
+.social-list-link:focus{
+    background-color: var(--active-order-btn-color);
+}
+
+/* ==============Customers-section============== */
+
+.company-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.company-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--company-color);
+    border-radius: 4px;
+
+    flex-basis: calc((100% - 120px)/6);
+    height: 88px;
+}
+
+.company-item:hover,
+.company-item:focus{
+    border-color: var(--active-order-btn-color);
+}
+
+.company-icon{
+    max-width: 104px;
+    max-height: 56px;
+    fill: var(--company-color);
+}
+.company-item:hover .company-icon,
+.company-item:focus .company-icon{
+    fill: var(--active-order-btn-color);
+}
+
 /* ==============footer-section============== */
+
+.footer-div{
+    display: flex;
+    gap: 120px;
+}
 
 .footer-section{
     background: var(--dark-theme-color);
@@ -342,8 +408,7 @@ h1,h2,h3,h4,p{
     padding-bottom: 100px;
 }
 .footer-text{
-    width: 264px;
-    margin: 0;
+    max-width: 264px;
 
     font-size: 16px;
     line-height: 1.5;
@@ -357,6 +422,43 @@ h1,h2,h3,h4,p{
 
     color: var(--light-grey);
 }
+
+/* ==============footer-social============== */
+
+.social-text{
+    font-weight: 500;
+    margin-bottom: 16px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: var(--dark-theme-text-color);
+}
+
+.footer-social-list{
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.footer-social-list-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--footer-social);
+
+    padding: 2px;
+    width: 40px;
+    height: 40px;
+}
+
+.footer-social-list-link:hover,
+.footer-social-list-link:focus{
+    background-color: var(--accent-color-social);
+}
+
 
 /* ==============portfolio============== */
 
