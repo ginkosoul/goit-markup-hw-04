@@ -185,7 +185,6 @@ h1,h2,h3,h4,p{
     background-repeat: no-repeat;
     background-position: center center;
     align-items: stretch;
-    background-size: cover;
 }
 .hero-div{
     display: flex;
@@ -214,13 +213,15 @@ h1,h2,h3,h4,p{
     gap: 24px;
 }
 .advantage-icon{
-    background: var(--light-grey);
-    border-radius: 4px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    
+    background: var(--light-grey);
+    border-radius: 4px;
 
+    height: 112px;
     margin-bottom: 8px;
-    padding: 24px 0;
 }
 
 .advantage-list-name{
@@ -231,7 +232,7 @@ h1,h2,h3,h4,p{
     letter-spacing: 0.02em;
 
     color: var(--dark-theme-color);
-
+    margin-bottom: 8px;
 }
 .advantage-list-desc{
     font-size: 16px;
@@ -348,7 +349,6 @@ h1,h2,h3,h4,p{
     border-radius: 50%;
     background-color: var(--accent-color);
 
-    padding: 2px;
     width: 40px;
     height: 40px;
 }
@@ -365,7 +365,8 @@ h1,h2,h3,h4,p{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.company-item{
+
+.company-link{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -373,22 +374,20 @@ h1,h2,h3,h4,p{
     border: 1px solid var(--company-color);
     border-radius: 4px;
 
-    flex-basis: calc((100% - 120px)/6);
     height: 88px;
+    width: 168px;
 }
 
-.company-item:hover,
-.company-item:focus{
+.company-link:hover,
+.company-link:focus{
     border-color: var(--active-order-btn-color);
 }
 
 .company-icon{
-    max-width: 104px;
-    max-height: 56px;
     fill: var(--company-color);
 }
-.company-item:hover .company-icon,
-.company-item:focus .company-icon{
+.company-link:hover .company-icon,
+.company-link:focus .company-icon{
     fill: var(--active-order-btn-color);
 }
 
@@ -446,7 +445,6 @@ h1,h2,h3,h4,p{
     border-radius: 50%;
     background-color: var(--footer-social);
 
-    padding: 2px;
     width: 40px;
     height: 40px;
 }
@@ -484,7 +482,7 @@ h1,h2,h3,h4,p{
     flex-basis: calc((100% - 48px)/3);
 }
 
-.portfolio-item:hover{
+.card-link:hover{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
@@ -498,11 +496,11 @@ h1,h2,h3,h4,p{
 .card-div{
     border: 1px solid var(--footer-text-color);
     border-top: none;
-    padding: 32px 0;
+    padding: 32px 16px;
 }
 
 .portfolio-card-name{
-    text-align: center;
+    text-align: start;
     margin-bottom: 8px;
 
     font-weight: 500;
@@ -515,7 +513,7 @@ h1,h2,h3,h4,p{
 }
 
 .card-group{
-    text-align: center;
+    text-align: start;
 
     font-size: 16px;
     line-height: 1.5;
